@@ -81,7 +81,7 @@ class AirConditioner {
 
 	}
 
-	public synchronized void decrement() {
+	public  void decrement() {
 		
 		lock.lock();
 		try {
