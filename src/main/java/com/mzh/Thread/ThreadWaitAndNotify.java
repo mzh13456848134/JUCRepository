@@ -112,10 +112,9 @@ public class ThreadWaitAndNotify {
 		AirConditioner airConditioner = new AirConditioner();
 
 		new Thread(() -> {
-			for (int i = 1; i <= 10; i++) {
+			for (int i = 1; i <= 20; i++) {
 				try {
-					TimeUnit.MILLISECONDS.sleep(200);
-				} catch (InterruptedException e) {
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 				airConditioner.increment();
@@ -123,10 +122,9 @@ public class ThreadWaitAndNotify {
 		}, "线程A").start();
 
 		new Thread(() -> {
-			for (int i = 1; i <= 10; i++) {
+			for (int i = 1; i <= 20; i++) {
 				try {
-					TimeUnit.MILLISECONDS.sleep(300);
-				} catch (InterruptedException e) {
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 				airConditioner.decrement();
@@ -134,10 +132,9 @@ public class ThreadWaitAndNotify {
 		}, "线程B").start();
 
 		new Thread(() -> {
-			for (int i = 1; i <= 10; i++) {
+			for (int i = 1; i <= 20; i++) {
 				try {
-					TimeUnit.MILLISECONDS.sleep(400);
-				} catch (InterruptedException e) {
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 				airConditioner.increment();
@@ -145,10 +142,9 @@ public class ThreadWaitAndNotify {
 		}, "线程C").start();
 
 		new Thread(() -> {
-			for (int i = 1; i <= 10; i++) {
+			for (int i = 1; i <= 20; i++) {
 				try {
-					TimeUnit.MILLISECONDS.sleep(500);
-				} catch (InterruptedException e) {
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 				airConditioner.decrement();
